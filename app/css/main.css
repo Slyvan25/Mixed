@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'trench100';
+    src: url('../font/trench100free-webfont.woff2') format('woff2'),
+         url('../font/trench100free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes load-animation {
+    0%   { width: 0%; }
+    100% { width: 100%; }
+  }
+
+body{
+    background-color: #161615;
+    font-family: 'trench100';
+    margin: 0;
+}
+
+loadingscreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+loadingscreen > img{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+}
+
+bar{
+    height: 1vh;
+    background-color: #808080;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    transition: width 0.5s;
+    animation: load-animation 5s;
+}

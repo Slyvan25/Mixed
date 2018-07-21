@@ -1,0 +1,46 @@
+<% include ./parts/header %>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.6/wavesurfer.min.js"></script>
+
+<div id="wave1"></div>
+<a href="#" onclick="wave1.playPause();" style="color: gainsboro">PLAY/PAUSE</a>
+
+<div id="wave2"></div>
+<a href="#" onclick="wave2.playPause();" style="color: gainsboro">PLAY/PAUSE</a>
+
+<script>
+    //deck 1
+    let wave1 = WaveSurfer.create({
+        container: '#wave2',
+        waveColor: 'violet',
+        progressColor: 'purple',
+        responsive: true,
+        mediaControls: true,
+        forceDecode: true,
+        hideScrollbar: true,
+        partialRender: true
+    });
+
+    //deck 2
+    let wave2 = WaveSurfer.create({
+        container: '#wave2',
+        waveColor: 'violet',
+        progressColor: 'purple',
+        responsive: true,
+        mediaControls: true,
+        forceDecode: true,
+        hideScrollbar: true,
+        partialRender: true
+    });
+    
+    wave1.load('/music/Da Tweekaz - Moana How Far Ill Go (Official Preview).wav');
+    wave2.load('/music/Tiësto  Sevenn - BOOM (Official Video).mp3');
+    wave1.zoom(100);
+    wave2.zoom(100);
+ //  let item = <%= music_item %>
+
+    foreach(item)
+    {
+        console.log(item);
+    }
+</script>
